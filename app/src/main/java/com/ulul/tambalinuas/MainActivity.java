@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Pindah3(View view) {
-        Intent intent = new Intent(MainActivity.this, MapsActivity3.class);
+        Intent intent = new Intent(MainActivity.this, CustomList.class);
         startActivity(intent);
     }
 }

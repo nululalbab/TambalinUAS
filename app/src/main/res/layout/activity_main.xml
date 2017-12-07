@@ -58,16 +58,16 @@
                 android:onClick="Pindah2"
                 android:textColor="@android:color/white" />
 
-            <!--<Button-->
-                <!--android:id="@+id/cariterdekat"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:background="#000000"-->
-                <!--android:text="Cari Terdekat"-->
-                <!--android:onClick="Pindah3"-->
-                <!--android:textColor="@android:color/white" />-->
+            <Button
+                android:id="@+id/cariterdekat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="Cari List Tambal Ban"
+                android:onClick="Pindah3"
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </LinearLayout>

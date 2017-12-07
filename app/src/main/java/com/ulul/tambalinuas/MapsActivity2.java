@@ -95,15 +95,15 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .position(latLngITS)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("ITS").snippet("Nomor Tukang Tambal Ban"))
-                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
+                .title("ITS").snippet("Nomor Tukang Tambal Ban"));
+//                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
 
         mMap.addMarker(new MarkerOptions()
                 .position(latLngUNAIR)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("UNAIR").snippet("Nomor Tukang Tambal Ban"))
-                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
+                .title("UNAIR").snippet("Nomor Tukang Tambal Ban"));
+//                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
     }
 
     public void onMapSearch(View view) {
