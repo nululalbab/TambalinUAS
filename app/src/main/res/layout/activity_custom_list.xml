@@ -10,7 +10,7 @@
 
     <SearchView
         android:id="@+id/search"
-        android:queryHint="cobaa"
+        android:queryHint="Masukkan Nama Tukang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </SearchView>

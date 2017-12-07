@@ -95,15 +95,15 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .position(latLngITS)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("ITS").snippet("Nomor Tukang Tambal Ban"));
-//                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
+                .title("ITS").snippet("Nomor Tukang Tambal Ban"))
+                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
 
         mMap.addMarker(new MarkerOptions()
                 .position(latLngUNAIR)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("UNAIR").snippet("Nomor Tukang Tambal Ban"));
-//                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.logotransparent));
+                .title("UNAIR").snippet("Nomor Tukang Tambal Ban"))
+                .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
     }
 
     public void onMapSearch(View view) {
@@ -174,7 +174,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(20));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
 
         //stop location updates
         if (mGoogleApiClient != null) {

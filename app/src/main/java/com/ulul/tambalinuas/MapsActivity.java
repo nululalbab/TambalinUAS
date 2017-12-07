@@ -130,7 +130,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 getNearbyPlacesData.execute(DataTransfer);
                 Toast.makeText(MapsActivity.this,"Nearby Tambal Ban", Toast.LENGTH_LONG).show();
 
-                mMap.animateCamera(CameraUpdateFactory.zoomTo(25.0f));
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(9.0f));
             }
         });
     }

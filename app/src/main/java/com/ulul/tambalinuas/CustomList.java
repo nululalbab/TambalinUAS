@@ -24,10 +24,8 @@ public class CustomList extends AppCompatActivity implements SearchView.OnQueryT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_list);
-        mobileArray = new String [] {"Android","IPhone","WindowsMobile","Blackberry",
-                "WebOS","Ubuntu","Windows7","Max OS X", "ubaid"};
-        phone = new String [] {"Android","IPhone","WindowsMobile","Blackberry",
-                "WebOS","Ubuntu","Windows7","Max OS X", "089678007410"};
+        mobileArray = new String [] {"ITS","UNAIR","ubaid"};
+        phone = new String [] {"081224997124","081224997124", "089678007410"};
 
         adapter = new ArrayAdapter<String>(this,
                 R.layout.list, mobileArray);
@@ -45,6 +43,30 @@ public class CustomList extends AppCompatActivity implements SearchView.OnQueryT
                 if (String.valueOf(lv.getItemAtPosition(i)).equals("ubaid")){
                     String o = "tel:";
                     o += phone[searchPosition("ubaid")];
+
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse(o));
+
+                    if (ActivityCompat.checkSelfPermission(CustomList.this,
+                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        return;
+                    }
+                    startActivity(callIntent);
+                } else if (String.valueOf(lv.getItemAtPosition(i)).equals("ITS")) {
+                    String o = "tel:";
+                    o += phone[searchPosition("ITS")];
+
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse(o));
+
+                    if (ActivityCompat.checkSelfPermission(CustomList.this,
+                            Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                        return;
+                    }
+                    startActivity(callIntent);
+                }   else if (String.valueOf(lv.getItemAtPosition(i)).equals("UNAIR")) {
+                    String o = "tel:";
+                    o += phone[searchPosition("UNAIR")];
 
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
                     callIntent.setData(Uri.parse(o));
