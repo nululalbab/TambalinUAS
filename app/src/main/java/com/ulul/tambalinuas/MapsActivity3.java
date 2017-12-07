@@ -28,7 +28,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+//import com.google.android.gms.location.places.PlaceDetectionClient;
+//import com.google.android.gms.location.places.PlaceFilter;
+//import com.google.android.gms.location.places.PlaceLikelihoodBufferResponse;
+
+
+public class MapsActivity3 extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
@@ -116,21 +121,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         btn_search = (Button) findViewById(R.id.btn_search);
         btn_search.setOnClickListener(new View.OnClickListener() {
-            String Tambal = "tambal";
+            String Veterinarian = "veterinarian";
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
                 mMap.clear();
-                String url = getUrl(latitude, longitude, Tambal);
+                String url = getUrl(latitude, longitude, Veterinarian);
                 Object[] DataTransfer = new Object[2];
                 DataTransfer[0] = mMap;
                 DataTransfer[1] = url;
                 Log.d("onClick", url);
                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(MapsActivity.this,"Nearby Tambal Ban", Toast.LENGTH_LONG).show();
+                Toast.makeText(MapsActivity3.this,"Nearby Veterinarian", Toast.LENGTH_LONG).show();
 
-                mMap.animateCamera(CameraUpdateFactory.zoomTo(25.0f));
+                mMap.animateCamera(CameraUpdateFactory.zoomTo(13.0f));
             }
         });
     }
@@ -162,7 +167,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googlePlacesUrl.append("location=" + latitude + "," + longitude);
         googlePlacesUrl.append("&radius=" + PROXIMITY_RADIUS);
         googlePlacesUrl.append("&type=" + nearbyPlace);
-        googlePlacesUrl.append("&keyword=" + "tambal");
+        googlePlacesUrl.append("&keyword=" + "veterinarian");
         googlePlacesUrl.append("&sensor=true");
         googlePlacesUrl.append("&key=" + "AIzaSyATuUiZUkEc_UgHuqsBJa1oqaODI-3mLs0");
         Log.d("getUrl", googlePlacesUrl.toString());
@@ -195,8 +200,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 40.0f));
-        Toast.makeText(MapsActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f));
+        Toast.makeText(MapsActivity3.this,"Your Current Location", Toast.LENGTH_LONG).show();
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));
 

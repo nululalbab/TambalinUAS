@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = (Button) findViewById(R.id.cariposisi);
         Button btn2 = (Button) findViewById(R.id.caritambalban);
+        Button btn3 = (Button) findViewById(R.id.btn_search);
 
     }
 
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void Pindah2(View view) {
         Intent intent = new Intent(MainActivity.this, MapsActivity2.class);
+        startActivity(intent);
+    }
+
+    public void Pindah3(View view) {
+        Intent intent = new Intent(MainActivity.this, MapsActivity3.class);
         startActivity(intent);
     }
 }
