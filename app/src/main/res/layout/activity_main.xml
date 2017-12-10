@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ulul.tambalinuas.MainActivity">
+    tools:context="com.ulul.tambalinuas.MainActivity"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#ffd600">
 
         <ImageView
             android:id="@+id/logo"

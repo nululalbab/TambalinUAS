@@ -49,7 +49,7 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_maps2);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -95,14 +95,14 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
                 .position(latLngITS)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("ITS").snippet("Nomor Tukang Tambal Ban"))
+                .title("ITS").snippet("Buka 06.00 - 22.00"))
                 .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
 
         mMap.addMarker(new MarkerOptions()
                 .position(latLngUNAIR)
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                .title("UNAIR").snippet("Nomor Tukang Tambal Ban"))
+                .title("UNAIR").snippet("Buka 06.00 - 22.00"))
                 .setIcon(BitmapDescriptorFactory.fromResource(R.drawable.marker));
     }
 
